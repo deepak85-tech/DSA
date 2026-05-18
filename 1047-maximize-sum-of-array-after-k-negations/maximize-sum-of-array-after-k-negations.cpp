@@ -17,7 +17,7 @@ public:
             mn=min(mn, x);
         }
         if(k%2==1) {
-            s-=2*mn;
+            s=s-2*mn;
         }
 
         return s;
