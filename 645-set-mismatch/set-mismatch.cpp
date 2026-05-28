@@ -5,7 +5,7 @@ public:
         int i=0,j=n-1;
         sort(nums.begin(),nums.end());
         vector<int>r;
-        for(int i=0;i<n-1;i++) {
+        for(int i=0;i<n;i++) {
             if(nums[i]==nums[i+1]) {
                 r.push_back(nums[i]);
                 break;
