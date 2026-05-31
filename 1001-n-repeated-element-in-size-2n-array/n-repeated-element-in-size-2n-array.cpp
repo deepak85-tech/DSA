@@ -2,7 +2,7 @@ class Solution {
 public:
     int repeatedNTimes(vector<int>& nums) {
         int n=nums.size(),r;
-        vector<int>ans(10001,0);
+        vector<int>ans(10000,0);
         for(int i=0;i<n;i++)
         {
             ans[nums[i]]++;
