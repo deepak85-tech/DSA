@@ -3,10 +3,10 @@ public:
     int maxOperations(vector<int>& nums) {
         int n=nums.size();
         int prev=nums[0]+nums[1];
-        int c=1,t;
+        int c=1;
         for(int i=2;i<n-1;i=i+2)
         {
-            t=nums[i]+nums[i+1];
+            int t=nums[i]+nums[i+1];
             if(t==prev)
             {
                 c++;
@@ -15,7 +15,6 @@ public:
             else{
                 break;
             }
-
         }
         return c;
     }
