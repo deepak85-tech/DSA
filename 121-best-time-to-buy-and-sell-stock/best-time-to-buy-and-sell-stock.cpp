@@ -12,8 +12,6 @@ public:
             mm=min(mm,prices[i]);
         }
         return m;
-    
-            
         
     }
 };
