@@ -10,7 +10,7 @@ public:
         }
         int n=res.size();
         reverse(res.begin(),res.end());
-        string result="";
+        string result;
         for(int i=0;i<n;i++)
         {
             result=result+res[i];
