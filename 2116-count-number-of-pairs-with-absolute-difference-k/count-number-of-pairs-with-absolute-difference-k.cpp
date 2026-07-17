@@ -1,13 +1,7 @@
-struct hash_pair {
-    size_t operator()(const pair<int,int>& p) const {
-        return hash<int>()(p.first) ^ (hash<int>()(p.second) << 1);
-    }
-};
-
 class Solution {
 public:
     int countKDifference(vector<int>& nums, int k) {
-        unordered_map<pair<int,int>,int,hash_pair>mp;
+        map<pair<int,int>,int>mp;
         int n=nums.size(),c=0;
         for(int i=0;i<n;i++)
         {
