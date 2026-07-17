@@ -17,7 +17,7 @@ public:
             }
             else
             {
-                if(tolower(s[i])!=tolower(s[j])) return false;
+                if(toupper(s[i])!=toupper(s[j])) return false;
                 i++;
                 j--;
             }
