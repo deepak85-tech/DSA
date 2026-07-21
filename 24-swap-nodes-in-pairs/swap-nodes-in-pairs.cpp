@@ -14,9 +14,7 @@ public:
         ListNode *temp=head;
         while(temp!=nullptr && temp->next!=nullptr)
         {
-            int t=temp->val;
-            temp->val=temp->next->val;
-            temp->next->val=t;
+            swap(temp->val,temp->next->val);
             temp=temp->next->next;
         }
         return head;
