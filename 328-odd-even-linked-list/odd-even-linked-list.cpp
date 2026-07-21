@@ -15,7 +15,6 @@ public:
         ListNode*o=head;
         ListNode*e=head->next;
         ListNode *even=head->next;
-        int c=3;
         while(e!=nullptr && e->next!=nullptr)
         {
             o->next=e->next;
