@@ -17,14 +17,9 @@ public:
         {
             int a=temp->val;
             int b=temp->next->val;
-            while(b!=0)
-            {
-                int t=a%b;
-                a=b;
-                b=t;
-            }
+            int z=__gcd(a,b); 
 
-            ListNode *aa=new ListNode(a);
+            ListNode *aa=new ListNode(z);
             aa->next=temp->next;
             temp->next=aa;
             temp=aa->next;
