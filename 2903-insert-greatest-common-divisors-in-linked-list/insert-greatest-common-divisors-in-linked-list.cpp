@@ -17,7 +17,7 @@ public:
         {
             int a=temp->val;
             int b=temp->next->val;
-            int z=__gcd(a,b); 
+            int z=gcd(a,b); 
 
             ListNode *aa=new ListNode(z);
             aa->next=temp->next;
