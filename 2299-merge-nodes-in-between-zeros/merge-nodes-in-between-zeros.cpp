@@ -11,16 +11,17 @@
 class Solution {
 public:
     ListNode* mergeNodes(ListNode* head) {
-        ListNode*dum=new ListNode(-1);
-        ListNode *t=dum;
+        ListNode*first=head->next;
         ListNode *temp=head->next;
+        ListNode *p=nullptr;
         int s=0;
         while(temp)
         {
             if(temp->val==0)
             {
-                t->next=new ListNode(s);
-                t=t->next;
+                first->val=s;
+                p=first;
+                first=first->next;
                 s=0;
             }
             else
@@ -30,7 +31,7 @@ public:
             }
             temp=temp->next;
         }
-        return dum->next;
-        
+        p->next=nullptr;
+        return head->next;
     }
 };
