@@ -37,8 +37,7 @@ public:
         ff->next=list2;
         t2->next=ss;
         return list1;
-
-
+        
         
     }
 };
