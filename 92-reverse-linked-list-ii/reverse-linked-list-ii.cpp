@@ -35,13 +35,8 @@ public:
             if(pos==left-1)
             {
                 f=temp;
-               
             }
-            if(pos==left)
-            {
-                ff=temp;
-            }
-          
+            if(pos==left)ff=temp;
             if(right==pos)
             {
 
