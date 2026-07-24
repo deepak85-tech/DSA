@@ -11,12 +11,7 @@
 class Solution {
 public:
     int numComponents(ListNode* head, vector<int>& nums) {
-        unordered_set<int>s;
-        int n=nums.size();
-        for(int i=0;i<n;i++)
-        {
-            s.insert(nums[i]);
-        }
+        unordered_set<int>s(nums.begin(),nums.end());
         int ans = 0;
         while (head) {
             if (s.count(head->val) &&
