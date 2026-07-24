@@ -55,15 +55,14 @@ public:
         }
          ListNode *nn;
 
-        if(f)
+        if(f){
             nn=revers(f->next);
-        else
-            nn=revers(head);
-
-        if(f)
             f->next=nn;
-        else
+        }
+        else{
+            nn=revers(head);
             head=nn;
+        }
 
         ff->next=l;
 
