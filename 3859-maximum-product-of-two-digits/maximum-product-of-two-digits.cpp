@@ -1,18 +1,21 @@
 class Solution {
 public:
     int maxProduct(int n) {
-        int p=1;
-        int m=INT_MIN;
-        vector<int>a;
+     
+        int m=-1;
+        int mm=-1;
         while(n>0)
         {
             int t=n%10;
-            a.push_back(t);
+              if (t>m) {
+                mm=m;
+                m=t;
+            }
+            else if(t>mm) {
+                mm=t;
+            }
             n=n/10;
         }
-        sort(a.begin(),a.end());
-        int nn=a.size();
-        int d=a[nn-2]*a[nn-1];
-        return d;
+        return m*mm;
     }
 };
