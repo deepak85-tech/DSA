@@ -13,24 +13,22 @@ public:
     ListNode* modifiedList(vector<int>& nums, ListNode* head) {
         set<int>a(nums.begin(),nums.end());
         ListNode *t=head;
-        ListNode *p=nullptr;
+        ListNode*dum=new ListNode(-1);
+        dum->next=head;
+        ListNode*c=dum;
         while(t)
         {
-
             if(a.count(t->val))
             {
-                if(t==head) head=head->next;
-                else {
-                   if(p) p->next=t->next;
-                }
-
+                c->next=t->next;
             }
-            else {
-                p=t;
+            else
+            {
+                c=t;
             }
             t=t->next;
         }
-        return head;
+        return dum->next;
 
         
     }
