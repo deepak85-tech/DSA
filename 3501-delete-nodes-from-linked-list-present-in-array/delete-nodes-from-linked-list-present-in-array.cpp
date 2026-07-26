@@ -21,7 +21,7 @@ public:
             {
                 if(t==head) head=head->next;
                 else {
-                    p->next=t->next;
+                   if(p) p->next=t->next;
                 }
 
             }
