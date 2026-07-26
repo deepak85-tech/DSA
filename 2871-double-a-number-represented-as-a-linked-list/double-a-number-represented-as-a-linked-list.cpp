@@ -36,7 +36,7 @@ public:
             {
                 cc->next=new ListNode(m);
                 if(cc)cc=cc->next;
-                carry=m/10;
+                carry=0;
             }
             else
             {
