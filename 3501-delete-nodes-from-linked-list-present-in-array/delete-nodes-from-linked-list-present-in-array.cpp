@@ -11,6 +11,7 @@
 class Solution {
 public:
     ListNode* modifiedList(vector<int>& nums, ListNode* head) {
+        if(head==nullptr)return nullptr;
         set<int>a(nums.begin(),nums.end());
         ListNode *t=head;
         ListNode*dum=new ListNode(-1);
