@@ -9,7 +9,7 @@ public:
         {
            f[s[j]-'A']++;
            mf=max(mf,f[s[j]-'A']);
-           if((j-i+1)-mf>k)
+           while((j-i+1)-mf>k)
            {
             f[s[i]-'A']--;
             i++;
